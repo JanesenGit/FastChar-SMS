@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database>
+<database name="*">
+
+    <table name="final_sms" comment="短信发送记录">
+
+        <column name="sendId" comment="编号" type="int" length="11"
+                primary="true" autoincrement="true" nullable="not null"/>
+
+        <column name="sendPhone" comment="手机号码" type="varchar"
+                nullable="null" length="500" index="true"/>
+
+        <column name="sendType" comment="发送类型" type="varchar"
+                nullable="null" length="500" index="true"/>
+
+        <column name="sendContent" comment="发送内容" type="text"
+                nullable="null"/>
+
+        <column name="sendParams" comment="发送参数" type="text"
+                nullable="null"/>
+
+        <column name="sendResult" comment="发送结果" type="text"
+                nullable="null"/>
+
+        <column name="sendDateTime" comment="录入时间" type="datetime"
+                nullable="null" length="6" render="NONE"/>
+    </table>
+
+
+</database>
